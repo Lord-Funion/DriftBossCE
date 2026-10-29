@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+<title id="title">Drift Boss CE</title><desc id="desc">One button. Every corner counts. A native game for the TI-84 Plus CE.</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#122b44"/><stop offset="1" stop-color="#071827"/></linearGradient></defs>
+<rect width="1200" height="320" rx="24" fill="url(#bg)"/>
+<path d="M850 0h160L810 320H650z" fill="#f2a737" opacity=".12"/><path d="M1080 0h45L925 320h-45z" fill="#f2a737" opacity=".28"/>
+<rect x="46" y="35" width="202" height="30" rx="15" fill="#f2a737"/>
+<text x="147" y="56" text-anchor="middle" fill="#10263b" font-family="Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="2">TI-84 PLUS CE</text>
+<text x="44" y="149" fill="white" font-family="Arial,sans-serif" font-size="82" font-weight="900" letter-spacing="-3">DRIFT BOSS<tspan fill="#f2a737"> CE</tspan></text>
+<text x="48" y="195" fill="#d4e1ec" font-family="Arial,sans-serif" font-size="27">One button. Every corner counts.</text>
+<g font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#f4c16e"><text x="48" y="267">8 CARS</text><text x="191" y="267">5 TRACK THEMES</text><text x="428" y="267">3 BOOSTERS</text><text x="620" y="267">SAVED PROGRESS</text></g>
+<text x="1136" y="280" text-anchor="end" fill="#a0b5c8" font-family="Arial,sans-serif" font-size="16">v0.2</text>
+</svg>

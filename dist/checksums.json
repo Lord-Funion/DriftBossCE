@@ -1,0 +1,50 @@
+[
+  {
+    "file": "DBAS0.8xv",
+    "variable": "DBAS0",
+    "bytes": 62902,
+    "sha256": "a236ae9311be91513c643b8dc117c40bbe47a33558cd461c8b7d1f1123867bf8"
+  },
+  {
+    "file": "DBAS1.8xv",
+    "variable": "DBAS1",
+    "bytes": 62653,
+    "sha256": "6d04ceb9e4daf84725e713e583127494c6c3d7cf575c50fa95b065fc02e1f4eb"
+  },
+  {
+    "file": "DBAS2.8xv",
+    "variable": "DBAS2",
+    "bytes": 58151,
+    "sha256": "3579a8660bc981962940625b6cb1703aa22d3af8a38c5c98ac8072e33eb7202a"
+  },
+  {
+    "file": "DRIFTB.8xp",
+    "variable": "DRIFTB",
+    "bytes": 18475,
+    "sha256": "da2cdb60251b1c8c5ba1f98e750fd4a6748703b3834f9e5a56ec01f05494e0b2"
+  },
+  {
+    "file": "fileioc.8xv",
+    "variable": "FILEIOC",
+    "bytes": 2697,
+    "sha256": "b56335a48ba81388800f1991e7fb73e7f15220e4d52040fda524a3fd6223c97e"
+  },
+  {
+    "file": "graphx.8xv",
+    "variable": "GRAPHX",
+    "bytes": 11430,
+    "sha256": "ff2042adf537cddf08f63941d5f117d7bbe720d5cd91bb8da0d254fe1a005a94"
+  },
+  {
+    "file": "keypadc.8xv",
+    "variable": "KEYPADC",
+    "bytes": 177,
+    "sha256": "4ecc0c7bedaa1ea8e4c6f7dd7667445668fe8b00998864880f3b6ce1b47396ef"
+  },
+  {
+    "file": "libload.8xv",
+    "variable": "LibLoad",
+    "bytes": 1207,
+    "sha256": "d29c934206a42b1f2865144ca05e28c5bf9e78fc4275c59f2cf2692beeb125cc"
+  }
+]

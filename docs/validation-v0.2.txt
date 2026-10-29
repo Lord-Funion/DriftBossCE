@@ -1,0 +1,50 @@
+DRIFT BOSS CE v0.2 - PERFORMANCE UPDATE
+=====================================
+
+Transfer DRIFTB.8xp to your calculator using TI Connect CE.
+Choose Replace for the existing DRIFTB program, and keep it archived.
+Run DRIFTB through CEaShell as before.
+
+KEEP your existing DBAS0, DBAS1, DBAS2, the four libraries, and DBSAVE.
+The graphics data files and saved progress format have not changed.
+There is no OS or CEaShell update involved.
+
+An FPS counter now appears in the lower right during a run. It updates
+after about half a second. This reports the calculator's rendered FPS.
+The build still caps rendering at 30 FPS, but does not guarantee reaching
+that rate on every calculator or in every scene.
+
+CHANGES
+-------
+- Native 24-bit position math instead of software 32-bit frame-loop math.
+- A small nearby collision list instead of repeated full-pool scans.
+- Original image data converted to native assembly-rendered RLET sprites.
+- A 48 KiB RAM cache avoids repeatedly reading hot sprites from flash.
+- Fewer projections and shorter skid trails.
+- Fast orange background fill instead of a per-row gradient.
+- Bounded simulation catch-up and less repeated hardware keypad polling.
+
+VALIDATION
+----------
+CPU-only CEmu core benchmark at 48 MHz, rev M, with the actual graphx
+library loaded into RAM and graphics banks mapped into emulated flash:
+
+                            v0.1          v0.2
+60 physics ticks          3,725.6 ms      191.2 ms
+Warmed render frame         114.5 ms       26.7 ms
+
+These are component timings from a synthetic CPU harness, not a measured
+frame rate on your calculator. It bypasses TI OS startup and CEaShell;
+the ROM's indirect-call trampoline is reproduced and ClearVRAM is stubbed
+because the harness starts with zeroed VRAM. Frame presentation and shell
+launch are not covered by this benchmark.
+
+A 1,694-tick driving trace was run as native eZ80 machine code in that
+core. All 19 checked gameplay fields matched the desktop test exactly,
+including exact coordinates, velocities, RNG, score 271, 29 coins,
+difficulty 7, and the final crash. All ten track patterns still match
+the original. All 931 tested sprite conversion/clipping cases preserve
+the original pixel indices, including cache evictions.
+
+Actual performance on your physical calculator is still to be confirmed.
+Please report the FPS number shown while driving, especially at corners.

@@ -1,0 +1,39 @@
+name: Build and verify
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Run core regression tests
+        run: |
+          cc -std=c11 -O2 -Wall -Wextra -Isrc tests/test_core.c src/game.c -o core-tests
+          ./core-tests
+      - name: Install pinned CE toolchain
+        run: |
+          curl --fail --location --retry 3 https://github.com/CE-Programming/toolchain/releases/download/v15.0/CEdev-Linux.tar.gz -o "$RUNNER_TEMP/CEdev-Linux.tar.gz"
+          echo "85f4794a617b134249a9cba8a084414e86e16d2a68377b1d72ace30c636dbdf9  $RUNNER_TEMP/CEdev-Linux.tar.gz" | sha256sum --check --status
+          tar -xzf "$RUNNER_TEMP/CEdev-Linux.tar.gz" -C "$RUNNER_TEMP"
+          echo "$RUNNER_TEMP/CEdev/bin" >> "$GITHUB_PATH"
+      - name: Build native program and graphics variables
+        run: |
+          make
+          python3 tools/build_assets.py
+      - name: Verify transfer files and reproducible program payload
+        run: python3 tools/verify_release.py --built bin/DRIFTB.8xp
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: DriftBossCE-calculator-build
+          path: |
+            bin/DRIFTB.8xp
+            bin/DBAS*.8xv
+            dist/fileioc.8xv
+            dist/graphx.8xv
+            dist/keypadc.8xv
+            dist/libload.8xv
+          if-no-files-found: error

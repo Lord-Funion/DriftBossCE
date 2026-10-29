@@ -1,0 +1,13 @@
+Drift Boss CE — one button, endless corners.
+
+Hold 2nd or Enter to drift right; release to drift left. Time each switch early and keep your momentum under control as the road twists, narrows, and climbs.
+
+This unofficial native adaptation brings Drift Boss to the TI-84 Plus CE with eight unlockable vehicles, five track themes, ten track-pattern generators in both directions, ramps and split roads, coins, a garage, and three boosters: Double Score, Car Insurance, and Coin Rush. Best score, cars, coins, and booster stock are saved when you quit from the garage.
+
+Version 0.2 improves the fixed-point simulation and cached native graphics. The owner reports about 22 FPS on a TI-84 Plus CE Python running OS 5.8.3 through CEaShell; performance varies.
+
+Includes the native C source, generated artwork banks, all required runtime libraries, install/build instructions, screenshots, and GIFs. A single-transfer .b84 bundle is also included. Requires an existing working C/ASM launch setup. Approximately 214 KiB archive and at least 60 KiB free user RAM. No OS update or ROM is included.
+
+Original game and artwork: MarketJS. Native adaptation/release: Lord-Funion. This is a calculator adaptation with simplified physics and rendering, not the original browser executable. Media is captured from the native renderer with scripted inputs, not recorded on physical hardware.
+
+Source and releases: https://github.com/Lord-Funion/DriftBossCE

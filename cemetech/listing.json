@@ -1,0 +1,17 @@
+{
+  "title": "Drift Boss CE v0.2",
+  "author": "Lord-Funion",
+  "platform": "TI-84 Plus CE / CE Python",
+  "category_hint": "TI-84 Plus CE native C/assembly games; choose the matching category in the current form",
+  "version": "0.2",
+  "repository": "https://github.com/Lord-Funion/DriftBossCE",
+  "upload_page": "https://www.cemetech.net/downloads/upload",
+  "description_file": "description.txt",
+  "suggested_screenshots": [
+    "01-gameplay.gif",
+    "02-later-run.gif",
+    "03-garage.gif",
+    "04-boosters.gif"
+  ],
+  "screenshot_bytes_total": 336814
+}

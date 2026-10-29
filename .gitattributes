@@ -1,0 +1,14 @@
+* text=auto
+*.c text eol=lf
+*.h text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+makefile text eol=lf
+*.bin binary
+*.8xp binary
+*.8xv binary
+*.b84 binary
+*.gif binary
+*.png binary
+*.zip binary

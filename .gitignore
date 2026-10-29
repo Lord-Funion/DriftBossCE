@@ -1,0 +1,12 @@
+bin/
+obj/
+build/
+__pycache__/
+*.pyc
+*.o
+*.obj
+*.map
+*.exe
+.DS_Store
+releases/
+/core-tests
